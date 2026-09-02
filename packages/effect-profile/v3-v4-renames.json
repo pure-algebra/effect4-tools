@@ -1,0 +1,884 @@
+[
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isEmptyType(cause)",
+  "v4": "cause.reasons.length === 0",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isFailType(cause)",
+  "v4": "Cause.isFailReason(reason)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isDieType(cause)",
+  "v4": "Cause.isDieReason(reason)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isInterruptType(cause)",
+  "v4": "Cause.isInterruptReason(reason)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isSequentialType(cause)",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isParallelType(cause)",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isFailure(cause)",
+  "v4": "Cause.hasFails(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isDie(cause)",
+  "v4": "Cause.hasDies(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isInterrupted(cause)",
+  "v4": "Cause.hasInterrupts(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isInterruptedOnly(cause)",
+  "v4": "Cause.hasInterruptsOnly(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.empty",
+  "v4": "Cause.empty",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.fail(error)",
+  "v4": "Cause.fail(error)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.die(defect)",
+  "v4": "Cause.die(defect)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.interrupt(fiberId)",
+  "v4": "Cause.interrupt(fiberId)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.sequential(left, right)",
+  "v4": "Cause.combine(left, right)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.parallel(left, right)",
+  "v4": "Cause.combine(left, right)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.failureOption(cause)",
+  "v4": "Cause.findErrorOption(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.failureOrCause(cause)",
+  "v4": "Cause.findError(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.dieOption(cause)",
+  "v4": "Cause.findDefect(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.interruptOption(cause)",
+  "v4": "Cause.findInterrupt(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.failures(cause)",
+  "v4": "cause.reasons.filter(Cause.isFailReason)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.defects(cause)",
+  "v4": "cause.reasons.filter(Cause.isDieReason)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.interruptors(cause)",
+  "v4": "Cause.interruptors(cause)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.NoSuchElementException",
+  "v4": "Cause.NoSuchElementError",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.TimeoutException",
+  "v4": "Cause.TimeoutError",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.IllegalArgumentException",
+  "v4": "Cause.IllegalArgumentError",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.ExceededCapacityException",
+  "v4": "Cause.ExceededCapacityError",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.UnknownException",
+  "v4": "Cause.UnknownError",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.RuntimeException",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.InterruptedException",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.InvalidPubSubCapacityException",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isNoSuchElementException(u)",
+  "v4": "Cause.isNoSuchElementError(u)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isTimeoutException(u)",
+  "v4": "Cause.isTimeoutError(u)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isIllegalArgumentException(u)",
+  "v4": "Cause.isIllegalArgumentError(u)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isExceededCapacityException(u)",
+  "v4": "Cause.isExceededCapacityError(u)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "cause.md",
+  "v3": "Cause.isUnknownException(u)",
+  "v4": "Cause.isUnknownError(u)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchAll",
+  "v4": "Effect.catch",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchAllCause",
+  "v4": "Effect.catchCause",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchAllDefect",
+  "v4": "Effect.catchDefect",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchTag",
+  "v4": "Effect.catchTag",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchTags",
+  "v4": "Effect.catchTags",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchIf",
+  "v4": "Effect.catchIf",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchSome",
+  "v4": "Effect.catchFilter",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchSomeCause",
+  "v4": "Effect.catchCauseFilter",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "error-handling.md",
+  "v3": "Effect.catchSomeDefect",
+  "v4": null,
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentLogLevel",
+  "v4": "References.CurrentLogLevel",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentMinimumLogLevel",
+  "v4": "References.MinimumLogLevel",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentLogAnnotations",
+  "v4": "References.CurrentLogAnnotations",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentLogSpan",
+  "v4": "References.CurrentLogSpans",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentScheduler",
+  "v4": "References.Scheduler",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentMaxOpsBeforeYield",
+  "v4": "References.MaxOpsBeforeYield",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.currentTracerEnabled",
+  "v4": "References.TracerEnabled",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "fiberref.md",
+  "v3": "FiberRef.unhandledErrorLogLevel",
+  "v4": "References.UnhandledLogLevel",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "forking.md",
+  "v3": "Effect.fork",
+  "v4": "Effect.forkChild",
+  "note": "Fork as a child of the current fiber",
+  "kind": null
+ },
+ {
+  "doc": "forking.md",
+  "v3": "Effect.forkDaemon",
+  "v4": "Effect.forkDetach",
+  "note": "Fork detached from parent lifecycle",
+  "kind": null
+ },
+ {
+  "doc": "forking.md",
+  "v3": "Effect.forkScoped",
+  "v4": "Effect.forkScoped",
+  "note": "Fork tied to the current `Scope` (unchanged)",
+  "kind": null
+ },
+ {
+  "doc": "forking.md",
+  "v3": "Effect.forkIn",
+  "v4": "Effect.forkIn",
+  "note": "Fork in a specific `Scope` (unchanged)",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "asSchema(schema)",
+  "v4": "revealCodec(schema)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "encodedSchema(schema)",
+  "v4": "toEncoded(schema)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "typeSchema(schema)",
+  "v4": "toType(schema)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "compose(schemaB)",
+  "v4": "decodeTo(schemaB)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "annotations(ann)",
+  "v4": "annotate(ann)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "decodingFallback",
+  "v4": "catchDecoding(...)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "parseJson()",
+  "v4": "UnknownFromJsonString",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "parseJson(schema)",
+  "v4": "fromJsonString(schema)",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "pattern(regex)",
+  "v4": "check(isPattern(regex))",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "nonEmptyString",
+  "v4": "isNonEmpty",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "BigIntFromSelf",
+  "v4": "BigInt",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "SymbolFromSelf",
+  "v4": "Symbol",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "URLFromSelf",
+  "v4": "URL",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "RedactedFromSelf",
+  "v4": "Redacted",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Redacted",
+  "v4": "RedactedFromValue",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "EitherFromSelf",
+  "v4": "Result",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "DateFromNumber",
+  "v4": "DateFromMillis",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Date",
+  "v4": "DateFromString",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "TaggedError",
+  "v4": "TaggedErrorClass",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "decodeUnknown",
+  "v4": "decodeUnknownEffect",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "decode",
+  "v4": "decodeEffect",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "decodeUnknownEither",
+  "v4": "decodeUnknownExit",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "decodeEither",
+  "v4": "decodeExit",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "encodeUnknown",
+  "v4": "encodeUnknownEffect",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "encode",
+  "v4": "encodeEffect",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "encodeUnknownEither",
+  "v4": "encodeUnknownExit",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "encodeEither",
+  "v4": "encodeExit",
+  "note": "rename",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "asserts(schema)(input)",
+  "v4": "asserts(schema, input)",
+  "note": "semi-auto",
+  "kind": "semi-auto"
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Literal(null)",
+  "v4": "Null",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Literal(\"a\", \"b\")",
+  "v4": "Literals([\"a\", \"b\"])",
+  "note": "variadic-to-array",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "pickLiteral(\"a\", \"b\")",
+  "v4": "Literals(...).pick([\"a\", \"b\"])",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Union(A, B)",
+  "v4": "Union([A, B])",
+  "note": "variadic-to-array",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Tuple(A, B)",
+  "v4": "Tuple([A, B])",
+  "note": "variadic-to-array",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "TemplateLiteral(A, B)",
+  "v4": "TemplateLiteral([A, B])",
+  "note": "variadic-to-array",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "TemplateLiteralParser(A, B)",
+  "v4": "TemplateLiteralParser(schema.parts)",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "Record({ key, value })",
+  "v4": "Record(key, value)",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "filter(predicate)",
+  "v4": "check(makeFilter(predicate))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "filter(refinement)",
+  "v4": "refine(refinement)",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "UUID",
+  "v4": "String.check(isUUID())",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "ULID",
+  "v4": "String.check(isULID())",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "pick(\"a\")",
+  "v4": "mapFields(Struct.pick([\"a\"]))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "omit(\"a\")",
+  "v4": "mapFields(Struct.omit([\"a\"]))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "partial",
+  "v4": "mapFields(Struct.map(Schema.optional))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "partialWith({ exact: true })",
+  "v4": "mapFields(Struct.map(Schema.optionalKey))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "required(schema)",
+  "v4": "schema.mapFields(Struct.map(Schema.requiredKey))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "extend(structB)",
+  "v4": "mapFields(Struct.assign(fieldsB))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "transform(from, to, { decode, encode })",
+  "v4": "from.pipe(decodeTo(to, SchemaTransformation.transform({ decode, encode })))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "transformOrFail(from, to, { decode, encode })",
+  "v4": "from.pipe(decodeTo(to, { decode: SchemaGetter.transformOrFail(...), ... }))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "transformLiteral(from, to)",
+  "v4": "Literal(from).transform(to)",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "transformLiterals([0,\"a\"], [1,\"b\"])",
+  "v4": "Literals([0, 1]).transform([\"a\", \"b\"])",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "attachPropertySignature(\"k\", \"v\")",
+  "v4": "mapFields(f => ({...f, k: tagDefaultOmit(\"v\")}))",
+  "note": "restructure",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "validate*",
+  "v4": "decode*",
+  "note": "removed",
+  "kind": "removed"
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ exact: true }",
+  "v4": "optionalKey(schema)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ default }",
+  "v4": "schema.pipe(withDecodingDefaultType(...))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ exact: true, default }",
+  "v4": "schema.pipe(withDecodingDefaultTypeKey(...))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ nullable: true }",
+  "v4": "optional(NullOr(schema))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ nullable: true, exact: true }",
+  "v4": "optionalKey(NullOr(schema))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ nullable: true, default }",
+  "v4": "optional(NullOr(schema))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "schema.md",
+  "v3": "{ nullable: true, exact: true, default }",
+  "v4": "optionalKey(NullOr(schema))",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "scope.md",
+  "v3": "Scope.extend",
+  "v4": "Scope.provide",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.GenericTag<T>(id)",
+  "v4": "Context.Service<T>(id)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.Tag(id)<Self, Shape>()",
+  "v4": "Context.Service<Self, Shape>()(id)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Effect.Tag(id)<Self, Shape>()",
+  "v4": "Context.Service<Self, Shape>()(id)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Effect.Service<Self>()(id, opts)",
+  "v4": "Context.Service<Self>()(id, { make })",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.Reference<Self>()(id, opts)",
+  "v4": "Context.Reference<T>(id, opts)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.make(tag, impl)",
+  "v4": "Context.make(tag, impl)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.get(ctx, tag)",
+  "v4": "Context.get(map, tag)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.add(ctx, tag, impl)",
+  "v4": "Context.add(map, tag, impl)",
+  "note": "",
+  "kind": null
+ },
+ {
+  "doc": "services.md",
+  "v3": "Context.mergeAll(...)",
+  "v4": "Context.mergeAll(...)",
+  "note": "",
+  "kind": null
+ }
+]

@@ -1,0 +1,4 @@
+{ "name": "@pure-algebra/ast-export", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Parse TypeScript with the compiler and export Penn-Treebank and CoNLL-U files for lean4-nlp.",
+  "bin": { "ast-export": "./ast-export.mjs" },
+  "peerDependencies": { "typescript": "5.9.3" } }

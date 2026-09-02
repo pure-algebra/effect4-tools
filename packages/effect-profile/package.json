@@ -1,0 +1,4 @@
+{ "name": "@pure-algebra/effect-profile", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Extract the JSDoc API row table, runnable examples, and the A/E/R channel census from a pinned effect package.",
+  "bin": { "effect-type-profile": "./type-profile.mjs" },
+  "peerDependencies": { "typescript": "5.9.3" } }

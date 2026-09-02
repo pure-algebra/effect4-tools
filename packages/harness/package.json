@@ -1,0 +1,3 @@
+{ "name": "@pure-algebra/harness", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Check a generated module against the pinned host: unpatched tsc, @effect/tsgo strict diagnostics, and a node run of its tail.",
+  "bin": { "effect4-check": "./check.mjs" } }

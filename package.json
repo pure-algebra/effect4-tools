@@ -1,0 +1,10 @@
+{
+  "name": "@pure-algebra/effect4-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TypeScript-side tooling for the pure-algebra Lean family: the host check harness, AST export for lean4-nlp, and Effect API profile extractors.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "engines": { "node": ">=22" }
+}
