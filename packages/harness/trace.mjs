@@ -11,6 +11,7 @@
 // differing row with the frame snapshot beside it. A run with a tracer defect
 // is reported invalid, never pass or fail.
 import { spawnSync } from "node:child_process"
+import { createHash } from "node:crypto"
 import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs"
 import { join, resolve } from "node:path"
 import { tmpdir } from "node:os"
@@ -121,12 +122,21 @@ for (const mask of masks) {
   }
 }
 
+// A patched copy (EFFECT4_PATCHED names its manifest) is recorded in the receipt
+// with the manifest digest; its frame rows are evidence of nothing but are kept.
+const patched = () => {
+  const manifest = process.env.EFFECT4_PATCHED
+  if (!manifest) return null
+  const text = readFileSync(manifest, "utf8")
+  return { manifest, sha256: createHash("sha256").update(text).digest("hex"), hunks: JSON.parse(text).hunks.map((h) => h.id) }
+}
 if (receiptPath) {
   const pinFile = existsSync(join(target, "host-pin.json")) ? JSON.parse(readFileSync(join(target, "host-pin.json"), "utf8")) : null
   const receipt = {
     format: "effect4-trace-receipt-v1",
     program, tape: golden.header.tape ?? "", rules: golden.header.rules ?? "",
-    host: { ...seen, pin: pinFile, node: process.version, platform: `${process.platform}-${process.arch}`, patched: null },
+    host: { ...seen, pin: pinFile, node: process.version, platform: `${process.platform}-${process.arch}`, patched: patched() },
+    patchedFrames: report.patchedFrames ?? [],
     scheduler: { mode: "TapeScheduler", maxOpsBeforeYield: report.maxOpsBeforeYield, yields: report.yields, scheduled: report.scheduled },
     foreign: report.foreign ?? [],
     primitives: report.primitives,
