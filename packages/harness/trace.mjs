@@ -38,8 +38,9 @@ const parseGolden = (text) => {
   for (const line of text.split("\n")) {
     if (line === "") continue
     const cells = line.split("\t")
-    if (["format", "face", "program", "tape", "rules"].includes(cells[0])) header[cells[0]] = cells.slice(1).join("\t")
-    else rows.push(line)
+    const eventKinds = ["op", "answer", "failed", "decide", "enter", "leave", "finalizer", "done", "frontier"]
+    if (eventKinds.includes(cells[0])) rows.push(line)
+    else header[cells[0]] = cells.slice(1).join("\t")  // provenance and identity rows
   }
   return { header, rows }
 }
