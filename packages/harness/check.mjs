@@ -9,7 +9,8 @@
 // service reports no diagnostic at strict; node runs tail.ts and it exits 0.
 // The harness prints one line per gate and exits non-zero on the first failure.
 import { execFileSync, spawnSync } from "node:child_process"
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync } from "node:fs"
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs"
+import { stageHarness } from "./copy.mjs"
 import { join, resolve } from "node:path"
 import { tmpdir } from "node:os"
 
@@ -33,8 +34,7 @@ if (!tsc) throw new Error("unpatched TypeScript compiler (tsc.original) not foun
 
 const temporary = mkdtempSync(join(tmpdir(), "effect4-check-"))
 try {
-  cpSync(target, temporary, { recursive: true })
-  if (!existsSync(join(temporary, "node_modules"))) symlinkSync(nodeModules, join(temporary, "node_modules"), "dir")
+  stageHarness(target, temporary, nodeModules)
 
   const direct = spawnSync(tsc, ["-p", "tsconfig.json", "--pretty", "false"], { cwd: temporary, encoding: "utf8" })
   if (direct.status !== 0 || direct.stdout !== "" || direct.stderr !== "")

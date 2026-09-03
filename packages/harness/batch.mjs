@@ -9,7 +9,8 @@
 // diverging case and a summary; exits 1 on any divergence, 3 on any invalid
 // run (tracer defect or unexpected scheduler yields).
 import { spawnSync } from "node:child_process"
-import { cpSync, existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs"
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs"
+import { stageHarness } from "./copy.mjs"
 import { join, resolve } from "node:path"
 import { tmpdir } from "node:os"
 
@@ -77,8 +78,7 @@ const goldens = readdirSync(goldensDir).filter((f) => f.endsWith(".tsv")).sort()
 const temporary = mkdtempSync(join(tmpdir(), "effect4-batch-"))
 let reports
 try {
-  cpSync(target, temporary, { recursive: true })
-  if (!existsSync(join(temporary, "node_modules"))) symlinkSync(nodeModules, join(temporary, "node_modules"), "dir")
+  stageHarness(target, temporary, nodeModules)
   writeFileSync(join(temporary, "batch.json"), JSON.stringify(goldens.map((g) => ({ program: g.program, tape: g.tape }))))
   const run = spawnSync("node", ["--experimental-strip-types", "--no-warnings", tail], {
     cwd: temporary, encoding: "utf8", maxBuffer: 256 * 1024 * 1024,

@@ -12,7 +12,8 @@
 // is reported invalid, never pass or fail.
 import { spawnSync } from "node:child_process"
 import { createHash } from "node:crypto"
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs"
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs"
+import { stageHarness } from "./copy.mjs"
 import { join, resolve } from "node:path"
 import { tmpdir } from "node:os"
 
@@ -79,8 +80,7 @@ const program = golden.header.program ?? "?"
 const temporary = mkdtempSync(join(tmpdir(), "effect4-trace-"))
 let report
 try {
-  cpSync(target, temporary, { recursive: true })
-  if (!existsSync(join(temporary, "node_modules"))) symlinkSync(nodeModules, join(temporary, "node_modules"), "dir")
+  stageHarness(target, temporary, nodeModules)
   const run = spawnSync("node", ["--experimental-strip-types", "--no-warnings", tail], {
     cwd: temporary, encoding: "utf8", env: { ...process.env, EFFECT4_TAPE: golden.header.tape ?? "" }
   })
