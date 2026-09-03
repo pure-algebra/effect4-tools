@@ -6,6 +6,7 @@
   "description": "Check a generated module against the pinned host: unpatched tsc, @effect/tsgo strict diagnostics, and a node run of its tail.",
   "bin": {
     "effect4-check": "./check.mjs",
-    "effect4-trace": "./trace.mjs"
+    "effect4-trace": "./trace.mjs",
+    "effect4-batch": "./batch.mjs"
   }
 }
